@@ -1,1 +1,1 @@
-# DP-Notes
+# Data Structure Notes
