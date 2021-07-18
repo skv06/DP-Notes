@@ -1,11 +1,17 @@
 
 //  Spiral traversal on a matrix
 
-// { Driver Code Starts
+//  Input:   r = 4, c = 4
+             matrix[][] = {{1, 2, 3, 4},
+                          {5, 6, 7, 8},
+                          {9, 10, 11, 12},
+                          {13, 14, 15,16}}
+
+//  Output:   1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
+
 #include <bits/stdc++.h> 
 using namespace std; 
 
- // } Driver Code Ends
 class Solution
 {   
     public: 
@@ -13,7 +19,8 @@ class Solution
     vector<int> spirallyTraverse(vector<vector<int> > matrix, int r, int c) 
     {
         vector<int> ans;
-        int top=0,down=r-1,left=0,right=c-1;
+        int top=0,down=r-1;
+        int left=0,right=c-1;
         int path = 0;
         while(top<=down && left<=right){
             // -------> right
@@ -55,7 +62,7 @@ class Solution
     }
 };
 
-// { Driver Code Starts.
+
 int main() {
     int t;
     cin>>t;
@@ -82,4 +89,4 @@ int main() {
         cout<<endl;
     }
     return 0;
-}  // } Driver Code Ends
+}
